@@ -1,0 +1,27 @@
+﻿<Application x:Class="NetworkLocator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NetworkLocator"
+             xmlns:viewModel="clr-namespace:NetworkLocator.MVVM.ViewModel"
+             xmlns:view="clr-namespace:NetworkLocator.MVVM.View"
+             StartupUri="MVVM\View\MainWindow.xaml">
+    <Application.Resources>
+         <ResourceDictionary>
+             <ResourceDictionary.MergedDictionaries>
+                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
+                 
+                 <ResourceDictionary Source="Style/Styles.xaml"/>
+             </ResourceDictionary.MergedDictionaries>
+             
+             <DataTemplate DataType="{x:Type viewModel:MainViewModel}">
+                 <view:MainWindow/>
+             </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:ScanViewModel}">
+                 <view:ScanView/>
+             </DataTemplate>
+         </ResourceDictionary>
+    </Application.Resources>
+</Application>
