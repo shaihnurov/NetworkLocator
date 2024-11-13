@@ -8,7 +8,7 @@ public class MainViewModel : ObservableObject
     public object CurrentView
     {
         get => _currentView;
-        private set => SetProperty(ref _currentView, value);
+        set => SetProperty(ref _currentView, value);
     }
     
     public MainViewModel()
